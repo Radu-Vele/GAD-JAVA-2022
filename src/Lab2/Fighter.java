@@ -5,6 +5,12 @@ public class Fighter {
     private int health;
     private int damagePerAttack;
 
+    public Fighter(String name, int health, int damagePerAttack) {
+        this.name = name;
+        this.health = health;
+        this.damagePerAttack = damagePerAttack;
+    }
+
     public void attack(Fighter opponent) {
         int newHealth = opponent.getHealth() - this.damagePerAttack;
         opponent.setHealth(newHealth);
