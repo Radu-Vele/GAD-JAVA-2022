@@ -1,4 +1,7 @@
-package Lab1;
+/*
+* FizzBuzz challenge  */
+
+package Lab1.ch1;
 
 public class Main {
     public static void main(String[] args) { //could add command line arguments

@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2.ch1;
 
 public class Fighter {
     private String name;
