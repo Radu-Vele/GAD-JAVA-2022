@@ -36,20 +36,34 @@ public class MainCh2 {
         System.out.println("-------\n");
         //studio names in which plays the actor with the name "actor cu 2 oscaruri"
         System.out.println("Studios with the wanted actor:");
+//        old method
+//        for(Studio currStudio : studioDatabase) {
+//            int count = 0;
+//            for(Film currFilm : currStudio.getFilme()) {
+//                for(Actor currActor : currFilm.getActori()) {
+//                    if(currActor.getNume() == "actor cu 2 oscaruri") {
+//                        if(count == 0) {
+//                            System.out.println(currStudio.getNume());
+//                            count = 1;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+
         for(Studio currStudio : studioDatabase) {
-            int count = 0;
-            for(Film currFilm : currStudio.getFilme()) {
-                for(Actor currActor : currFilm.getActori()) {
-                    if(currActor.getNume() == "actor cu 2 oscaruri") {
-                        if(count == 0) {
-                            System.out.println(currStudio.getNume());
-                            count = 1;
-                        }
-                    }
-                }
+            if(currStudio.getFilmByActor("actor cu 2 oscaruri") != null) {
+                System.out.println(currStudio.getNume());
             }
         }
+
         System.out.println("-------\n");
+
+
+
+
+
+
         //movie names in which plays at least an actor with age above 50
         System.out.println("Movie names in which plays at least an actor with age above 50");
         for(Studio currStudio : studioDatabase) {

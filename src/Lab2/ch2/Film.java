@@ -20,4 +20,13 @@ public class Film {
     public String getNume() {
         return nume;
     }
+
+    public Actor getActorByName(String name) {
+        for(Actor actor : getActori()) {
+            if(actor.getNume().equals(name)) {
+                return actor;
+            }
+        }
+        return null;
+    }
 }

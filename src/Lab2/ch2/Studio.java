@@ -15,4 +15,13 @@ public class Studio {
     public String getNume() {
         return nume;
     }
+
+    public Film getFilmByActor(String s) {
+        for(Film film : filme) {
+            if(film.getActorByName(s) != null) {
+                return film;
+            }
+        }
+        return null;
+    }
 }
