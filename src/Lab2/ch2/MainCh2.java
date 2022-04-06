@@ -36,6 +36,7 @@ public class MainCh2 {
         System.out.println("-------\n");
         //studio names in which plays the actor with the name "actor cu 2 oscaruri"
         System.out.println("Studios with the wanted actor:");
+
 //        old method
 //        for(Studio currStudio : studioDatabase) {
 //            int count = 0;
@@ -58,11 +59,6 @@ public class MainCh2 {
         }
 
         System.out.println("-------\n");
-
-
-
-
-
 
         //movie names in which plays at least an actor with age above 50
         System.out.println("Movie names in which plays at least an actor with age above 50");
