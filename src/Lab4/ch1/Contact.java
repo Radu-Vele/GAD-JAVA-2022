@@ -1,4 +1,4 @@
-package Lab4.exceptions.ch1;
+package Lab4.ch1;
 
 public class Contact {
     private String name;
