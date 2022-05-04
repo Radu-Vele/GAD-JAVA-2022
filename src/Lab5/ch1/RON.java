@@ -1,8 +1,8 @@
-package Lab5.Ch1;
+package Lab5.ch1;
 
 public class RON extends Currency{
-    public RON(Integer value) {
-        super(value);
+    public RON(Double value) {
+        super(value, 1);
     }
 
     @Override

@@ -1,21 +1,28 @@
-package Lab5.Ch1;
+package Lab5.ch1;
 
-import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class ExchangeDesk <F extends Currency, T extends Currency>{
 
-    public int rate = 4;
-    //more complex exchange rate could be a matrix based on the id on the currencies
-    //rate[id_1][id_2];. nmv
+    public double[][] rate = new double[3][3];
+
+    public ExchangeDesk() {
+    }
 
     public T convert(F from, Class<T> toClass) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
         T toReturn = null;
-
-        int value = from.getValue() * rate;
-
-        toReturn = toClass.getDeclaredConstructor(Integer.class).newInstance(value);
-
+        double init = 0;
+        toReturn = toClass.getDeclaredConstructor(Double.class).newInstance(init);
+        double value = from.getValue() * rate[from.getID()][toReturn.getID()];
+        toReturn.setValue(value);
         return toReturn;
+    }
+
+    public void addRate(Class<F> from, Class<T> toClass, Double newRate) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException{
+        double val = 0.0;
+        F fromObj = from.getDeclaredConstructor(Double.class).newInstance(val);
+        T toObj = toClass.getDeclaredConstructor(Double.class).newInstance(val);
+
+        rate[fromObj.getID()][toObj.getID()] = newRate;
     }
 }

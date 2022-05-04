@@ -1,12 +1,12 @@
-package Lab5.Ch1;
+package Lab5.ch1;
 
 public class USD extends Currency{
-    public USD(Integer value) {
-        super(value);
+    public USD(Double value) {
+        super(value, 0);
     }
 
     @Override
     public String toString() {
-        return "USD" + getValue();
+        return "USD " + getValue();
     }
 }

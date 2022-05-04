@@ -1,2 +1,7 @@
-package Lab8.ch1;public class Main {
+package Lab8.ch1;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
 }
