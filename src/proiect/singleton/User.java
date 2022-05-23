@@ -33,7 +33,7 @@ public class User {
         String output = "";
 
         for(Account account : accounts) {
-            output += accounts.toString();
+            output += account.toString();
             output += "\n";
         }
         return output;

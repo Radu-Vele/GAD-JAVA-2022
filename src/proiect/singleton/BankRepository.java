@@ -43,7 +43,7 @@ public class BankRepository {
         accounts2.add(account5);
 
         User user1 = new User("User1", accounts1);
-        User user2 = new User("User1", accounts2);
+        User user2 = new User("User2", accounts2);
 
         HashSet<User> userHashSet = new HashSet<>();
         userHashSet.add(user1);
@@ -56,7 +56,7 @@ public class BankRepository {
         User toReturn = null;
 
         for(User curr : userHashSet) {
-            if(curr.getUserID() == ID) {
+            if(curr.getUserID().equals(ID)) {
                 return curr;
             }
         }
