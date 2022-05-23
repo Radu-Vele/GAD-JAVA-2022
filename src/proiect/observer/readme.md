@@ -1,4 +1,4 @@
-# Observer design pattern Project
+# Observer design pattern Project: Restaurant Orders
 Author: Radu Vele
 
 @gitHub: Radu-Vele
